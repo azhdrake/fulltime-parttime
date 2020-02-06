@@ -19,7 +19,10 @@ namespace StudentTime
 
     private void buttStatus_Click(object sender, EventArgs e)
     {
+      // Data validation because we can't trust the user not to screw this up
       bool validCredit = double.TryParse(numCredits.Text, out double creditAmount);
+
+      // Not sure what you want me to say about this. It's an if statement. Containing more if statements.
       if (validCredit)
       {
         if (creditAmount >= 12 && creditAmount <= 24)
