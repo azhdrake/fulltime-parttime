@@ -31,8 +31,9 @@
       this.buttStatus = new System.Windows.Forms.Button();
       this.lblStatus = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
-      this.numCredits = new System.Windows.Forms.NumericUpDown();
-      ((System.ComponentModel.ISupportInitialize)(this.numCredits)).BeginInit();
+      this.trkNumCredits = new System.Windows.Forms.TrackBar();
+      this.lblNumCredits = new System.Windows.Forms.Label();
+      ((System.ComponentModel.ISupportInitialize)(this.trkNumCredits)).BeginInit();
       this.SuspendLayout();
       // 
       // buttStatus
@@ -57,23 +58,27 @@
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(43, 46);
+      this.label2.Location = new System.Drawing.Point(43, 18);
       this.label2.Name = "label2";
       this.label2.Size = new System.Drawing.Size(191, 25);
       this.label2.TabIndex = 3;
       this.label2.Text = "Number of Credits:";
       // 
-      // numCredits
+      // trkNumCredits
       // 
-      this.numCredits.Location = new System.Drawing.Point(240, 46);
-      this.numCredits.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-      this.numCredits.Name = "numCredits";
-      this.numCredits.Size = new System.Drawing.Size(139, 31);
-      this.numCredits.TabIndex = 1;
+      this.trkNumCredits.Location = new System.Drawing.Point(48, 46);
+      this.trkNumCredits.Maximum = 24;
+      this.trkNumCredits.Name = "trkNumCredits";
+      this.trkNumCredits.Size = new System.Drawing.Size(298, 90);
+      this.trkNumCredits.TabIndex = 4;
+      this.trkNumCredits.Scroll += new System.EventHandler(this.trkNumCredits_Scroll);
+      // 
+      // lblNumCredits
+      // 
+      this.lblNumCredits.Location = new System.Drawing.Point(330, 46);
+      this.lblNumCredits.Name = "lblNumCredits";
+      this.lblNumCredits.Size = new System.Drawing.Size(49, 53);
+      this.lblNumCredits.TabIndex = 5;
       // 
       // Form1
       // 
@@ -81,13 +86,14 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(430, 241);
-      this.Controls.Add(this.numCredits);
+      this.Controls.Add(this.lblNumCredits);
+      this.Controls.Add(this.buttStatus);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.lblStatus);
-      this.Controls.Add(this.buttStatus);
+      this.Controls.Add(this.trkNumCredits);
       this.Name = "Form1";
       this.Text = "Student Status!";
-      ((System.ComponentModel.ISupportInitialize)(this.numCredits)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.trkNumCredits)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -98,7 +104,8 @@
     private System.Windows.Forms.Button buttStatus;
     private System.Windows.Forms.Label lblStatus;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.NumericUpDown numCredits;
+    private System.Windows.Forms.TrackBar trkNumCredits;
+    private System.Windows.Forms.Label lblNumCredits;
   }
 }
 
