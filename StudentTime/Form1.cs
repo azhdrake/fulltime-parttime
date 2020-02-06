@@ -19,6 +19,8 @@ namespace StudentTime
 
     private void buttStatus_Click(object sender, EventArgs e)
     {
+      // No data validation cause there's no way for the user to screw this up
+        // Famous last words
       int creditAmount = trkNumCredits.Value;
       if (creditAmount >= 12 && creditAmount <= 24)
       {
@@ -40,6 +42,7 @@ namespace StudentTime
 
     private void trkNumCredits_Scroll(object sender, EventArgs e)
     {
+      // Lets the user see what the trackpad's set to
       lblNumCredits.Text = trkNumCredits.Value.ToString();
     }
   }
